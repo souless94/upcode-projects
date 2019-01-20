@@ -1,11 +1,4 @@
 from flask import Flask, flash, redirect, render_template, request, session, abort
-# From notebook
-import os
-import io
-import numpy
-from pandas import DataFrame
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.naive_bayes import MultinomialNB
 import pickle
 
 filename_classifier = r"C:\Users\wen kai\Downloads\y4s1\upcode-python\upcode-python-flask\students copy\02 - email spam classifier\classifier.sav"
@@ -23,7 +16,6 @@ def index():
 def predict():
     examples = [request.form['value']]
     example_count = vectorizer.transform(examples)
-    print(example_count)
     predictions = classifier.predict(example_count)
     return render_template("result.html",classification = predictions[0])
 
