@@ -1,0 +1,12 @@
+= Python flask projects
+
+== Introduction
+The aim of the flask projects is to explore on data presentation using a python webserver.
+
+== Contributors
+Chia Wen Kai, github: https://github.com/souless94[@souless94]
+
+== Acknowlegdements
+
+* Used the python pyTelegramBotAPI at https://github.com/eternnoir/pyTelegramBotAPI
+
