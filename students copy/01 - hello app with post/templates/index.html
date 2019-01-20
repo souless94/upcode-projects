@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Hello app</h1>
+        <p class="lead">This is a simple application to say hello!</p>
+    </div>
+</div>
+
+<form action="/hello" method="POST">
+    <div class="form-group">
+        <label for="value">Name:</label>
+        <input type="text" class="form-control" name="name">
+        <small id="value" class="form-text text-muted">Enter your name here:</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+{% endblock %}

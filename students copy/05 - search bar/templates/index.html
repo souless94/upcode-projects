@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block body %}
+
+
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Search Bar Project</h1>
+        <p class="lead">This is to try auto complete in a search bar.</p>
+        
+    </div>
+</div>
+<div id="write"></div>
+<form action="/predict" method="POST">
+    <div class="form-group">
+        <label for="value">search:</label>
+        <input type="text" class="form-control" id ="search" name="search" placeholder="enter to search" list="searching" oninput="writing()">
+        <script>
+            function writing() {
+                var userinput = document.getElementById("search").value;
+                document.getElementById("write").innerHTML = userinput;
+            }
+        </script>
+        <datalist id="searching">
+            {% for suggestion in suggestions %}
+            <option>{{ suggestion }}</option>
+            {% endfor %}
+        </datalist>
+        <small id="value" class="form-text text-muted">Enter the test  email here:</small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+{% endblock %}
