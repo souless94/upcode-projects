@@ -14,7 +14,7 @@
 <form action="/predict" method="POST">
     <div class="form-group">
         <label for="value">search:</label>
-        <input type="text" class="form-control" id ="search" name="search" placeholder="enter to search" list="searching" oninput="writing()">
+        <input type="text" class="form-control" id ="search" name="search" placeholder="enter to search" list="searching" oninput="writing()" autocomplete="off">
         <script>
             function writing() {
                 var userinput = document.getElementById("search").value;
